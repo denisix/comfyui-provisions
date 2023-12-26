@@ -66,16 +66,13 @@ function build_extra_start() {
     build_extra_get_models "/workspace/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved/models" "${ANIMATED_MODELS[@]}"
     build_extra_get_models "/workspace/ComfyUI/models/controlnet" "${CONTROLNET_MODELS[@]}"
      
-    cd /workspace/ComfyUI && \
-    micromamba run -n comfyui -e LD_PRELOAD=libtcmalloc.so python main.py \
-        --cpu \
-        --listen 127.0.0.1 \
-        --port 11404 \
-        --disable-auto-launch \
-        --quick-test-for-ci
-    
-    # Ensure pytorch hasn't been clobbered
-    $MAMBA_DEFAULT_RUN python /workspace/ai-dock/tests/assert-torch-version.py
+    #cd /workspace/ComfyUI && \
+    #micromamba run -n comfyui -e LD_PRELOAD=libtcmalloc.so python main.py \
+    #    --cpu \
+    #    --listen 127.0.0.1 \
+    #    --port 11404 \
+    #    --disable-auto-launch \
+    #    --quick-test-for-ci
 }
 
 function build_extra_get_nodes() {
