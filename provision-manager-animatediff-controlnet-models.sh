@@ -63,6 +63,10 @@ CONTROLNET_MODELS=(
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
 )
 
+UPSCALE_MODELS=(
+    "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
+)
+
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function build_extra_start() {
@@ -71,6 +75,7 @@ function build_extra_start() {
     build_extra_get_models "/workspace/ComfyUI/models/vae" "${VAE_MODELS[@]}"
     build_extra_get_models "/workspace/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved/models" "${ANIMATED_MODELS[@]}"
     build_extra_get_models "/workspace/ComfyUI/models/controlnet" "${CONTROLNET_MODELS[@]}"
+    build_extra_get_models "/workspace/ComfyUI/models/upscale_models" "${CONTROLNET_MODELS[@]}"
      
     #cd /workspace/ComfyUI && \
     #micromamba run -n comfyui -e LD_PRELOAD=libtcmalloc.so python main.py \
