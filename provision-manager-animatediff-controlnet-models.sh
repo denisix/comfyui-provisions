@@ -9,6 +9,7 @@ NODES=(
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
     "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+    "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
 )
 
 CHECKPOINT_MODELS=(
