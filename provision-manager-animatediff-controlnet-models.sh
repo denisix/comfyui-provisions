@@ -7,7 +7,8 @@ NODES=(
     "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved"
     "https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
-    "https://github.com/Fannovel16/comfyui_controlnet_aux"    
+    "https://github.com/Fannovel16/comfyui_controlnet_aux"
+    "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
 )
 
 CHECKPOINT_MODELS=(
